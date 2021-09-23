@@ -3,21 +3,30 @@ import axios from "axios";
 
 const App = () => {
   const [loding, setLoding] = useState("");
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://localhost:3001")
       .then((res) => {
-        console.log("res", res);
-        setLoding(res.data);
+        setLoding("success");
+        setList(res.data);
       })
       .catch((error) => {
-        console.log("error", error);
         setLoding("Failed");
       });
-  });
+  }, []);
+  console.log("intents", list);
 
-  return <div>{loding}</div>;
+  return (
+    <div>
+      <div>{loding}</div>
+      {list &&
+        list.map((intent, index) => (
+          <div key={index}>{intent.displayName}</div>
+        ))}
+    </div>
+  );
 };
 
 export default App;
