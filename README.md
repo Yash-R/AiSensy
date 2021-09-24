@@ -1,5 +1,5 @@
-Dialogflow Intents
-A Simple example of accessing dialgoflow intents via API
+# Dialogflow Intents
 
-React frontend as UI.
-NodeJS server to fetch and cater intent list.
+A minimilistic example of accessing dialgoflow intents via API
+- React frontend as dashboard.
+- NodeJS server to fetch and cater intent list.
