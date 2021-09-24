@@ -17,8 +17,6 @@ const App = () => {
         setLoding("Failed");
       });
   }, []);
-  console.log("intents", list);
-
   return (
     <div>
       <div className="heading">
