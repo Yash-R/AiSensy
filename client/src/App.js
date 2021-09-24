@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
+      .get("https://aisensytask.herokuapp.com/")
       .then((res) => {
         setLoding("");
         setList(res.data);
